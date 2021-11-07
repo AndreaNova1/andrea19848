@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', function () {
+    return view('cambio.listarMoneda');
+});
 
-Auth::routes();
+Route::get('/form', 'MonedaController@formMoneda');
+Route::post('/save','MonedaController@save')->name('save');
 
-Route::get('/home', 'HomeController@index')->name('home');

@@ -72,9 +72,10 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title m-b-md text black">
                     CRIPTOMONEDAS
                 </div>
+                <img src="https://www.cualit.com/wp-content/uploads/2017/08/banner-bitcois-post-web-news-80.jpg" width="120" height="40" alt="">
             </div>
         </div>
     </body>

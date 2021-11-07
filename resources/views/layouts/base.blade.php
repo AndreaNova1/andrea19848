@@ -37,8 +37,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="#"></a>
             </li>
-
-            </li>
             <ul class="navbar-nav">
                 <li class="nav-link">
                     <a  href=" {{ url('/form') }}" class="btn btn-outline-btn bg-info text-white" type="submit">Formulario</a>
@@ -58,4 +56,3 @@
 </body>
 
 </html>
-

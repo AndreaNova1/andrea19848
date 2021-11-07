@@ -128,10 +128,19 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
-
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'nombre' => [
+            'required' => 'El nombre es requerido',
+            'string' => 'El nombre tiene que ser un texto',
+            'max:255' => 'El nombre es demasiado largo'
+        ],
+
+        'email' => [
+            'required' => 'El email es requerido',
+            'string' => 'El email tiene que ser un texto',
+            'max:255' => 'El email es demasiado largo',
+            'email' => 'Formato de email incorrecto',
+            'unique' => 'El email ya existe',
         ],
     ],
 
