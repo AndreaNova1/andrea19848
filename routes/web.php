@@ -22,4 +22,6 @@ Route::get('/', 'MonedaController@List');
 Route::get('/form', 'MonedaController@formMoneda');
 //Guardar Monedas
 Route::post('/save','MonedaController@save')->name('save');
+//Eliminar Usuarios
+Route::delete('/delete/{id}','MonedaController@delete')->name('delete');
 

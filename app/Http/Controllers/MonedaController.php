@@ -30,4 +30,11 @@ class MonedaController extends Controller
         ]);
         return back()->with('datosGuardado','datos Guardado');
     }
+    //Eliminar Registros
+    public function delete($id){
+        Moneda::destroy($id);
+
+        return back()->with('registroElimnado', 'registroEliminado');
+    }
 }
+

@@ -14,9 +14,9 @@
                 </a>
                 <h2 class="text-center mb-5">Lista de Criptomoneda</h2>
                 <!-- Seccion de alertas -->
-                @if(session('usuarioEliminado'))
+                @if(session('registroEliminado'))
                     <div class="alert alert-success">
-                        {{session('usuarioEliminado')}}
+                        {{session('registroEliminado')}}
                     </div>
                 @endif
                 <table class="table table-bordered text-center">
@@ -31,16 +31,32 @@
                     </tr>
                     </thead>
                     <tbody>
+                            @foreach($mds as $md)
+                                <tr>
+                                    <td>{{$md->logo}}</td>
+                                    <td>{{$md->nombre}}</td>
+                                    <td>{{$md->precio}}</td>
+                                    <td>{{$md->descripcion}}</td>
+                                 </tr>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="{{route('editform', $md->id)}}">
+                                            <i class="fas fa-pencil-alt btn btn-primary mr-5"></i>
+                                        </a>
 
-                        <tr>
-                            <td>Maria</td>
-
-                        </tr>
-
+                                        <form action="{{ route('delete', $md->id) }}" method="POST">
+                                            @csrf @method('DELETE')
+                                            <button type="submit" onclick="return confirm('¿Desea eliminar el registro?')" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            @endforeach
                     </tbody>
 
                 </table>
-
+                {{$mds->links ()}}
             </div>
         </div>
 
