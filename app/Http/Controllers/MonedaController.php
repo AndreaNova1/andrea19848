@@ -59,9 +59,9 @@ class MonedaController extends Controller
     //editar Registros realizados
     public function editMoneda($id){
         $moneda= Moneda::findOrFail($id);
-        $lenguaje=Lenguaje_Progra::all();
+        $lenguaje_des=Lenguaje_Progra::all();
 
-        return view('cambio.editMoneda', compact('lenguaje'));
+        return view('cambio.editMoneda', compact('lenguaje_des'));
         }
 
         public function edit(Request $request, $id){

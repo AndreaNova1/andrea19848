@@ -41,7 +41,6 @@
                                     <td>{{$md->precio}}</td>
                                     <td>{{$md->descripcion}}</td>
                                     <td>{{$md->lenguaje_des}}</td>
-                                 </tr>
                                 <td>
                                     <div class="btn-group">
                                         <a href="{{route('editMoneda', $md->id)}}">
@@ -56,6 +55,7 @@
                                         </form>
                                     </div>
                                 </td>
+                                </tr>
                             @endforeach
                     </tbody>
 

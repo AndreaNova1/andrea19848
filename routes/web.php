@@ -28,3 +28,5 @@ Route::delete('/delete/{id}','MonedaController@delete')->name('delete');
 Route::get('/editMoneda/{id}','MonedaController@editMoneda')->name('editMoneda');
 //Edicion de usuarios
 Route::patch('/edit/{id}','MonedaController@edit')->name('edit');
+//istado de rutas para el apartado de lenguajes
+Route::get('/lenguaje/read', 'LenguajesController@read');

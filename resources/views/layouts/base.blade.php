@@ -45,9 +45,13 @@
             </ul>
             <li class="nav-link">
 
-                <a  href=" {{ url('/') }}" class="btn btn-outline-btn bg-info text-white" type="submit">Registro</a>
+                <a  href=" {{ url('/') }}" class="btn btn-outline-btn bg-info text-white" type="submit">Criptomoneda</a>
             </li>
         </ul>
+        <li class="nav-link">
+            <a  href=" {{ url('/lenguaje/read') }}" class="btn btn-outline-btn bg-info text-white" type="submit">Lenguaje</a>
+        </li>
+
     </div>
 
 </nav>
