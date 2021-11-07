@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/', function () {
-    return view('cambio.listarMoneda');
-});
-
+//Listado de Criptomonedas
+Route::get('/', 'MonedaController@List');
+//Formulario de Monedas
 Route::get('/form', 'MonedaController@formMoneda');
+//Guardar Monedas
 Route::post('/save','MonedaController@save')->name('save');
 

@@ -30,38 +30,16 @@
                         <th>Acciones</th>
                     </tr>
                     </thead>
-                    <tbody class="">
-                    @foreach($users as $user)
+                    <tbody>
 
                         <tr>
-                            <td>{{$user->nombre}}</td>
-                            <td>{{$user->email}}</td>
-                            <td class="border border-secondary" >
-                                <!--se utiliza para llamar a la foto-->
-                                <img src="{{ asset('storage').'/'.$user->foto}}" class="img-fluid img-thumbnail"  width="50px">
-                            </td>
-                            <td>{{$user->descripcion}}</td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="{{route('editform', $user->id)}}">
-                                        <i class="fas fa-pencil-alt btn btn-primary mr-5"></i>
-                                    </a>
+                            <td>Maria</td>
 
-                                    <form action="{{ route('delete', $user->id) }}" method="POST">
-                                        @csrf @method('DELETE')
-                                        <button type="submit" onclick="return confirm('¿Desea eliminar el usuario?')" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                            </td>
                         </tr>
-                    @endforeach
 
                     </tbody>
 
                 </table>
-                {{ $users->links() }}
 
             </div>
         </div>

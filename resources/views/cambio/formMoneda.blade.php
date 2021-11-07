@@ -10,9 +10,9 @@
 
 
             <!--mensaje flash-->
-            @if(session('usuarioGuardado'))
+            @if(session('datosGuardado'))
                 <div class="alert alert-success">
-                    {{ session('usuarioGuardado') }}
+                    {{ session('datosGuardado') }}
                 </div>
             @endif
 
@@ -37,8 +37,7 @@
                         <div class="row form-group">
                             <label for="" class="col-3">Logotipo</label>
                             <div class="custom-file col-md-8">
-                                <input type="file" name="logotipo" class="custom-file-input" id="customFile">
-                                <label class="custom-file-label" for="customFile"> Subir Logo </label>
+                                <input type="file" name="descripcion" class="img-fluid border">
                             </div>
                         </div>
 
@@ -50,12 +49,12 @@
 
                         <div class="row form-group">
                             <label for="" class="col-2" >Precio</label>
-                            <input type="file" name="foto" class="img-fluid border">
+                            <input type="tex" name="precio" class="form-control col-md-9 border border-info">
                         </div>
 
                         <div class="row form-group">
-                            <label for="" class="col-2" >Descripcion</label>
-                            <input type="file" name="descripcion" class="img-fluid border">
+                            <label for="" class="col-3" >Descripcion</label>
+                            <input type="string" name="descripcion" class="form-control col-md-8 border border-info">
                         </div>
 
                         <div class="row form-group">

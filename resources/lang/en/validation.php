@@ -129,21 +129,24 @@ return [
     |
     */
     'custom' => [
+        'logotipo'=>[
+            'required'=>'El logotipo es requerido',
+
+        ],
         'nombre' => [
             'required' => 'El nombre es requerido',
             'string' => 'El nombre tiene que ser un texto',
             'max:255' => 'El nombre es demasiado largo'
         ],
-
-        'email' => [
-            'required' => 'El email es requerido',
-            'string' => 'El email tiene que ser un texto',
-            'max:255' => 'El email es demasiado largo',
-            'email' => 'Formato de email incorrecto',
-            'unique' => 'El email ya existe',
-        ],
+    'precio'=>[
+        'required'=>'El precio es requerido',
     ],
 
+        'descripcion'=>[
+            'required'=>'La descripcion es requerida',
+        ],
+
+    ],
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
