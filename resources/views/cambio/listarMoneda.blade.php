@@ -9,7 +9,7 @@
 
                 <a href="/">
                     <br>
-                    <img src="https://umgnaranjo.com/wp-content/uploads/2018/11/logo.png" width="100" height="95" class="rounded mx-auto d-block" alt="...">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1978/1978543.png" width="100" height="95" class="rounded mx-auto d-block" alt="...">
                     <br>
                 </a>
                 <h2 class="text-center mb-5">Lista de Criptomoneda</h2>
@@ -33,14 +33,18 @@
                     <tbody>
                             @foreach($mds as $md)
                                 <tr>
-                                    <td>{{$md->logo}}</td>
+                                    <td class="border border-secondary" >
+                                        <!--se utiliza para llamar al logotipo-->
+                                        <img src="{{ asset('storage').'/'.$md->logotipo}}" class="img-fluid img-thumbnail"  width="50px">
+                                    </td>
                                     <td>{{$md->nombre}}</td>
                                     <td>{{$md->precio}}</td>
                                     <td>{{$md->descripcion}}</td>
+                                    <td>{{$md->lenguaje_des}}</td>
                                  </tr>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="{{route('editform', $md->id)}}">
+                                        <a href="{{route('editMoneda', $md->id)}}">
                                             <i class="fas fa-pencil-alt btn btn-primary mr-5"></i>
                                         </a>
 

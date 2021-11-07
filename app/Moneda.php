@@ -10,7 +10,7 @@ class Moneda extends Model
     protected $table='criptomoneda';
     public $timestamps=false;
     protected $fillable=[
-        'id', 'logo', 'nombre', 'precio', 'descripcion', 'lenguaje_id'
+        'id', 'logotipo', 'nombre', 'precio', 'descripcion', 'lenguaje_id'
     ];
 
     protected $primaryKey='id';

@@ -146,6 +146,9 @@ return [
             'required'=>'La descripcion es requerida',
         ],
 
+        'lenguaje_id'=>[
+            'required'=>'El lenguaje es requerido',
+        ],
     ],
     /*
     |--------------------------------------------------------------------------

@@ -29,18 +29,16 @@
 
             <div class="card">
 
-                <form action="{{ url ('save') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url ('/save') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card-header text-center p-3 mb-2 bg-info text-white">AGREGAR TIPO DE MONEDA</div>
-
-                    <div class="card-body  ">
-                        <div class="row form-group">
-                            <label for="" class="col-3">Logotipo</label>
-                            <div class="custom-file col-md-8">
-                                <input type="file" name="descripcion" class="img-fluid border">
-                            </div>
+                    <div class="row form-group">
+                        <label for="" class="col-3">Logotipo</label>
+                        <div class="custom-file col-md-8">
+                            <input type="file" name="logotipo" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile"> Adjunto el logotipo </label>
                         </div>
-
+                    </div>
 
                         <div class="row form-group">
                             <label for="" class="col-2">Nombre</label>
@@ -56,6 +54,17 @@
                             <label for="" class="col-3" >Descripcion</label>
                             <input type="string" name="descripcion" class="form-control col-md-8 border border-info">
                         </div>
+                        <div class="row form-group">
+                            <label for="" class="col-3">Lenguaje</label>
+                            <select name="lenguaje" class="form-control col-md-8" >
+                                <option value="" class="text-center"> Seleccione el Lenguaje </option>
+
+                                @foreach( $lenguaje as $lenguajes)
+                                    <option value="{{$lenguajes->id}}" class="text-center"> {{$lenguajes->lenguaje_des}}  </option>
+                                @endforeach
+                            </select>
+                        </div>
+
 
                         <div class="row form-group">
                             <button type="submit" class="btn btn-success col-md-3 offset-2">Guardar</button>

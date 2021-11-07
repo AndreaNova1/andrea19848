@@ -20,7 +20,7 @@
     <a class="navbar-brand" href="#">
         <img src="https://umg.edu.gt/assets/umg.png" width="40" height="40" alt="">
     </a>
-    <a class="navbar-brand" >Registro de Usuarios</a>
+    <a class="navbar-brand" >Registro de Criptomonedas</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

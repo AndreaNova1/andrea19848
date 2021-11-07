@@ -24,4 +24,7 @@ Route::get('/form', 'MonedaController@formMoneda');
 Route::post('/save','MonedaController@save')->name('save');
 //Eliminar Usuarios
 Route::delete('/delete/{id}','MonedaController@delete')->name('delete');
-
+//Formulario para editar usuarios
+Route::get('/editMoneda/{id}','MonedaController@editMoneda')->name('editMoneda');
+//Edicion de usuarios
+Route::patch('/edit/{id}','MonedaController@edit')->name('edit');

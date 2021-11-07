@@ -1,15 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class lenguaje_P extends Model
+class Lenguaje_Progra extends Model
 {
     protected $table='lenguaje_programacion';
     public $timestamps=false;
     protected $fillable=[
-        'id', 'descripcion_lenguaje'
+        'id', 'descripcion'
     ];
 
     protected $primaryKey='id';

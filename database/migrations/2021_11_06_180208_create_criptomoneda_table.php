@@ -17,7 +17,7 @@ class CreateCriptomonedaTable extends Migration
             $table->bigIncrements('id');
             $table->string('logotipo');
             $table->string('nombre');
-            $table->string('precio');
+            $table->float('precio');
             $table->string('descripcion');
         });
     }
