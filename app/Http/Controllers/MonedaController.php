@@ -61,7 +61,7 @@ class MonedaController extends Controller
         $moneda= Moneda::findOrFail($id);
         $lenguaje_des=Lenguaje_Progra::all();
 
-        return view('cambio.editMoneda', compact('lenguaje_des'));
+        return view('cambio.editMoneda', compact('moneda','lenguaje_des'));
         }
 
         public function edit(Request $request, $id){

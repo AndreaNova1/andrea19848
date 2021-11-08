@@ -25,11 +25,13 @@ Route::post('/criptomoneda/save','MonedaController@save')->name('save');
 //Eliminar Usuarios
 Route::delete('/criptomoneda/delete/{id}','MonedaController@delete')->name('delete');
 //Formulario para editar usuarios
-Route::get('/criptomoneda/editMoneda/{id}','MonedaController@editMoneda')->name('editMoneda');
+Route::post('/criptomoneda/editMoneda/{id}','MonedaController@editMoneda')->name('editMoneda');
 //Edicion de usuarios
-Route::patch('/criptomoneda/edit/{id}','MonedaController@edit')->name('edit');
+Route::post('/criptomoneda/edit/{id}','MonedaController@edit')->name('edit');
 
 //listado de rutas para el apartado de lenguajes
 Route::get('/lenguaje/read', 'LenguajesController@read');
 //formulario
 Route::get('/lenguaje/update/{id}','LenguajesController@updateForm');
+//Borrar registros
+Route::delete('/criptomoneda/delete/{id}','MonedaController@delete')->name('delete');

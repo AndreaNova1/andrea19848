@@ -43,9 +43,12 @@
                                     <td>{{$md->lenguaje_des}}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="{{route('editMoneda', $md->id)}}">
-                                            <i class="fas fa-pencil-alt btn btn-primary mr-5"></i>
-                                        </a>
+                                        <form action="{{route('editMoneda', $md->id)}}" method="POST">
+                                            @csrf
+                                            <button type="submit"  class="btn btn-danger">
+                                                <i class="fas fa-pencil-alt btn btn-primary mr-5"></i>
+                                            </button>
+                                        </form>
 
                                         <form action="{{ route('delete', $md->id) }}" method="POST">
                                             @csrf @method('DELETE')

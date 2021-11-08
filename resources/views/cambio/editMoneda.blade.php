@@ -23,8 +23,8 @@
                 @endif
 //modificacion reciente 17:54
                 <div class="card">
-                    <form action="{{ route('criptomoneda/edit', $lenguaje->id)}}" method="POST" enctype="multipart/form-data">
-                        @csrf @method('PATCH')
+                    <form action="{{ route('editMoneda', $moneda->id)}}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="card-header  text-center  p-4 mb-2 bg-info text-white">MODIFICAR REGISTRO</div>
 
                         <div class="card-body">
@@ -60,7 +60,7 @@
                                 <select name="rol_id" class="form-control col-md-9" >
                                     <option value="">Seleccione el lenguaje</option>
 
-                                    @foreach( $lenguajes as $lenguaje)
+                                    @foreach( $lenguaje_des as $lenguaje)
                                         <option value="{{$lenguaje->lenguaje_id}}" class="text-center"> {{$lenguaje->descripcion}}  </option>
                                     @endforeach
 
