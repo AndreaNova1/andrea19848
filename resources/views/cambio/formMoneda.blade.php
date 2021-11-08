@@ -29,9 +29,9 @@
 
             <div class="card">
 
-                <form action="{{ url ('/save') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url ('/criptomoneda/save') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="card-header text-center p-3 mb-2 bg-info text-white">AGREGAR TIPO DE MONEDA</div>
+                    <div class="card-header text-center p-3 mb-2 bg-info text-white">AGREGAR CRIPTOMONEDA</div>
                     <div class="row form-group">
                         <label for="" class="col-3">Logotipo</label>
                         <div class="custom-file col-md-8">

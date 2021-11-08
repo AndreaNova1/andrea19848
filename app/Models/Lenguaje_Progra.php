@@ -9,7 +9,7 @@ class Lenguaje_Progra extends Model
     protected $table='lenguaje_programacion';
     public $timestamps=false;
     protected $fillable=[
-        'id', 'descripcion'
+        'id', 'lenguaje_des'
     ];
 
     protected $primaryKey='id';

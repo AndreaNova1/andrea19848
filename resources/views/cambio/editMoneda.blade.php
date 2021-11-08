@@ -21,9 +21,9 @@
                         </ul>
                     </div>
                 @endif
-
+//modificacion reciente 17:54
                 <div class="card">
-                    <form action="{{ route('edit', $lenguaje->id)}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('criptomoneda/edit', $lenguaje->id)}}" method="POST" enctype="multipart/form-data">
                         @csrf @method('PATCH')
                         <div class="card-header  text-center  p-4 mb-2 bg-info text-white">MODIFICAR REGISTRO</div>
 

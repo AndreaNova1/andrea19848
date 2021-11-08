@@ -19,14 +19,17 @@ Route::get('/', function () {
 //Listado de Criptomonedas
 Route::get('/', 'MonedaController@List');
 //Formulario de Monedas
-Route::get('/form', 'MonedaController@formMoneda');
+Route::get('/criptomoneda/form', 'MonedaController@formMoneda');
 //Guardar Monedas
-Route::post('/save','MonedaController@save')->name('save');
+Route::post('/criptomoneda/save','MonedaController@save')->name('save');
 //Eliminar Usuarios
-Route::delete('/delete/{id}','MonedaController@delete')->name('delete');
+Route::delete('/criptomoneda/delete/{id}','MonedaController@delete')->name('delete');
 //Formulario para editar usuarios
-Route::get('/editMoneda/{id}','MonedaController@editMoneda')->name('editMoneda');
+Route::get('/criptomoneda/editMoneda/{id}','MonedaController@editMoneda')->name('editMoneda');
 //Edicion de usuarios
-Route::patch('/edit/{id}','MonedaController@edit')->name('edit');
-//istado de rutas para el apartado de lenguajes
+Route::patch('/criptomoneda/edit/{id}','MonedaController@edit')->name('edit');
+
+//listado de rutas para el apartado de lenguajes
 Route::get('/lenguaje/read', 'LenguajesController@read');
+//formulario
+Route::get('/lenguaje/update/{id}','LenguajesController@updateForm');
